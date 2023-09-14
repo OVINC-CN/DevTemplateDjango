@@ -45,6 +45,7 @@ class TaskLock:
         self.args = args
         self.kwargs = kwargs
 
+    # pylint: disable=R1710
     def __call__(self):
         """
         run task or skip
@@ -124,5 +125,4 @@ def task_lock(func: callable = None, lock_key: LockKey.__class__ = LockKey, retr
 
     if callable(func):
         return wrapper(func)
-    else:
-        return wrapper
+    return wrapper
