@@ -15,3 +15,6 @@ pycryptodome==3.15.0
 
 # Profile
 pyinstrument==4.4.0
+
+# Shell
+ipython>=8,<9
