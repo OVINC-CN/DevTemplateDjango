@@ -4,14 +4,16 @@ Django Template for OVINC Services
 
 ## Quick Start
 
-### 1. Download Code
-
-![img.png](statics/quickstart.png)
-
-### 2. Install Dependecies
+### 1. Install `cruft`
 
 ```bash
-$ pip install -r requirements.txt
+$ pip install cruft
+```
+
+### 2. Initial Project
+
+```bash
+$ cruft create https://github.com/OVINC-CN/DevTemplateDjango.git --checkout main
 ```
 
 ### 3. Prepare Environment
