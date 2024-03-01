@@ -23,7 +23,7 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install pylint
-        pip install -r "{{cookiecutter.project_name}}/requirements.txt"
+        pip install -r requirements.txt
     - name: Analysing the code with pylint
       run: |
         pylint --disable=C0114,W0613,C0115,W1113,W0223,C0116,R0903 --max-line-length=120 $(git ls-files '*.py')
