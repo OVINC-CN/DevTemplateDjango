@@ -1,9 +1,9 @@
+from adrf.viewsets import ViewSet
 from django.conf import settings
 from django.conf.global_settings import LANGUAGE_COOKIE_NAME
 from django.contrib.auth import get_user_model
 from ovinc_client.account.models import User
 from ovinc_client.core.auth import SessionAuthenticate
-from adrf.viewsets import ViewSet
 from ovinc_client.core.viewsets import MainViewSet
 from rest_framework.response import Response
 
@@ -25,6 +25,7 @@ class HomeView(ViewSet):
         return Response({"resp": msg, "user": request.user.username})
 
 
+# pylint: disable=R0901
 class I18nViewSet(MainViewSet):
     """
     International
