@@ -28,6 +28,7 @@ FRONTEND_URL = getenv_or_raise("FRONTEND_URL")
 
 # APPs
 INSTALLED_APPS = [
+    "daphne",
     "simpleui",
     "corsheaders",
     "django.contrib.auth",
@@ -37,6 +38,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "rest_framework",
+    "adrf",
     "sslserver",
     "ovinc_client.account",
     "ovinc_client.trace",
@@ -83,8 +85,8 @@ TEMPLATES = [
     },
 ]
 
-# WSGI
-WSGI_APPLICATION = "entry.wsgi.application"
+# ASGI
+ASGI_APPLICATION = "entry.asgi.application"
 
 # DB and Cache
 DATABASES = {

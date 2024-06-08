@@ -3,6 +3,7 @@ from django.conf.global_settings import LANGUAGE_COOKIE_NAME
 from django.contrib.auth import get_user_model
 from ovinc_client.account.models import User
 from ovinc_client.core.auth import SessionAuthenticate
+from adrf.viewsets import ViewSet
 from ovinc_client.core.viewsets import MainViewSet
 from rest_framework.response import Response
 
@@ -11,7 +12,7 @@ from apps.home.serializers import I18nRequestSerializer
 USER_MODEL: User = get_user_model()
 
 
-class HomeView(MainViewSet):
+class HomeView(ViewSet):
     """
     Home View
     """
@@ -19,7 +20,7 @@ class HomeView(MainViewSet):
     queryset = USER_MODEL.get_queryset()
     authentication_classes = [SessionAuthenticate]
 
-    def list(self, request, *args, **kwargs):
+    async def list(self, request, *args, **kwargs):
         msg = f"[{request.method}] Connect Success"
         return Response({"resp": msg, "user": request.user.username})
 
@@ -31,7 +32,7 @@ class I18nViewSet(MainViewSet):
 
     authentication_classes = [SessionAuthenticate]
 
-    def create(self, request, *args, **kwargs):
+    async def create(self, request, *args, **kwargs):
         """
         Change Language
         """

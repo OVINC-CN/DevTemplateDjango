@@ -1,11 +1,8 @@
 # ovinc
-ovinc-client==0.2.5
+ovinc-client==0.3.0b0
 
 # Celery
 celery==5.2.2
-
-# Server
-uwsgi==2.0.22
 
 # Datetime
 arrow==1.2.3
