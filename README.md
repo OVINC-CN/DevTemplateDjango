@@ -21,8 +21,8 @@ $ cruft create https://github.com/OVINC-CN/DevTemplateDjango.git --checkout main
 Create `.env` file in the base directory
 
 ```env
-UWSGI_PROCESSES=
-UWSGI_THREADS=
+WEB_PROCESSES=
+WEB_THREADS=
 DEBUG=
 LOG_LEVEL=
 APP_CODE=
