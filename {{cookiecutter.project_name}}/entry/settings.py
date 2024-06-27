@@ -200,3 +200,15 @@ RUM_HOST = os.getenv("RUM_HOST", "https://rumt-zh.com")
 
 # OVINC
 OVINC_API_DOMAIN = getenv_or_raise("OVINC_API_DOMAIN")
+
+# Tencent Cloud
+QCLOUD_SECRET_ID = os.getenv("QCLOUD_SECRET_ID", "")
+QCLOUD_SECRET_KEY = os.getenv("QCLOUD_SECRET_KEY", "")
+
+# Captcha
+CAPTCHA_TCLOUD_ID = os.getenv("CAPTCHA_TCLOUD_ID", QCLOUD_SECRET_ID)
+CAPTCHA_TCLOUD_KEY = os.getenv("CAPTCHA_TCLOUD_KEY", QCLOUD_SECRET_KEY)
+CAPTCHA_ENABLED = strtobool(os.getenv("CAPTCHA_ENABLED", "False"))
+CAPTCHA_APP_ID = int(os.getenv("CAPTCHA_APP_ID", 0))
+CAPTCHA_APP_SECRET = os.getenv("CAPTCHA_APP_SECRET", "")
+CAPTCHA_APP_INFO_TIMEOUT = int(os.getenv("CAPTCHA_APP_INFO_TIMEOUT", 60 * 10))
