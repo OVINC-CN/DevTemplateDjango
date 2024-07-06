@@ -94,6 +94,7 @@ DATABASES = {
         "PASSWORD": getenv_or_raise("DB_PASSWORD"),
         "HOST": getenv_or_raise("DB_HOST"),
         "PORT": int(getenv_or_raise("DB_PORT")),
+        "CONN_MAX_AGE": int(os.getenv("DB_CONN_MAX_AGE", str(60 * 60))),
         "OPTIONS": {"charset": "utf8mb4"},
     }
 }
