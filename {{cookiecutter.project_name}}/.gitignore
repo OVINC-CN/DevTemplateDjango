@@ -16,3 +16,6 @@ env
 
 # Static
 static
+
+# Trasnlation
+*.mo
