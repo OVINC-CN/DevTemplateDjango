@@ -140,6 +140,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 AUTHENTICATION_BACKENDS = ["ovinc_client.core.auth.OAuthBackend"]
+OVINC_TICKET_COOKIE_NAME = getenv_or_raise("OVINC_TICKET_COOKIE_NAME")
 
 # International
 LANGUAGE_CODE = os.getenv("DEFAULT_LANGUAGE", "zh-hans")
