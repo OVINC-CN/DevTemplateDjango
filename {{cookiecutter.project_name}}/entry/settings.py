@@ -61,6 +61,7 @@ MIDDLEWARE = [
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
     "django.middleware.locale.LocaleMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
+    "ovinc_client.core.middlewares.OAuthMiddleware",
     "ovinc_client.core.middlewares.SQLDebugMiddleware",
 ]
 if not DEBUG:
