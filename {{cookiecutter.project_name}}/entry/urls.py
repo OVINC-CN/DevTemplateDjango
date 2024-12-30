@@ -14,7 +14,8 @@ def serve_static(request, path, insecure=True, **kwargs):
 
 
 ADMIN_PAGE_URL = f"{settings.BACKEND_URL}/admin/"
-ADMIN_PAGE_LOGIN_URL = f"{settings.OVINC_WEB_URL}/login/?next={quote(ADMIN_PAGE_URL)}"
+FRONTEND_LOGIN_URL = f"{settings.FRONTEND_URL}/login/?next={quote(ADMIN_PAGE_URL)}"
+ADMIN_PAGE_LOGIN_URL = f"{settings.OVINC_WEB_URL}/login/?next={quote(FRONTEND_LOGIN_URL)}"
 
 urlpatterns = [
     path("favicon.ico", RedirectView.as_view(url=f"{settings.FRONTEND_URL}/favicon.ico")),
