@@ -139,6 +139,7 @@ AUTH_PASSWORD_VALIDATORS = [
         "NAME": "django.contrib.auth.password_validation.NumericPasswordValidator",
     },
 ]
+AUTHENTICATION_BACKENDS = ["ovinc_client.core.auth.OAuthBackend"]
 
 # International
 LANGUAGE_CODE = os.getenv("DEFAULT_LANGUAGE", "zh-hans")
