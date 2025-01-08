@@ -20,7 +20,7 @@ class HomeView(ViewSet):
     queryset = USER_MODEL.get_queryset()
     authentication_classes = [SessionAuthenticate]
 
-    async def list(self, request, *args, **kwargs):
+    def list(self, request, *args, **kwargs):
         msg = f"[{request.method}] Connect Success"
         return Response({"resp": msg, "user": request.user.username})
 
@@ -33,7 +33,7 @@ class I18nViewSet(MainViewSet):
 
     authentication_classes = [SessionAuthenticate]
 
-    async def create(self, request, *args, **kwargs):
+    def create(self, request, *args, **kwargs):
         """
         Change Language
         """
