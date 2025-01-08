@@ -50,5 +50,9 @@ class I18nViewSet(MainViewSet):
             lang_code,
             max_age=settings.SESSION_COOKIE_AGE,
             domain=settings.SESSION_COOKIE_DOMAIN,
+            path=settings.SESSION_COOKIE_PATH,
+            secure=settings.SESSION_COOKIE_SECURE or None,
+            httponly=settings.SESSION_COOKIE_HTTPONLY or None,
+            samesite=settings.SESSION_COOKIE_SAMESITE,
         )
         return response
