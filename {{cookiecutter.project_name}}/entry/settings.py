@@ -42,7 +42,6 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "rest_framework",
-    "adrf",
     "sslserver",
     "ovinc_client.account",
     "ovinc_client.trace",

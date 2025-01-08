@@ -1,4 +1,3 @@
-from adrf.viewsets import ViewSet
 from django.conf import settings
 from django.conf.global_settings import LANGUAGE_COOKIE_NAME
 from django.contrib.auth import get_user_model
@@ -12,7 +11,7 @@ from apps.home.serializers import I18nRequestSerializer
 USER_MODEL: User = get_user_model()
 
 
-class HomeView(ViewSet):
+class HomeView(MainViewSet):
     """
     Home View
     """
