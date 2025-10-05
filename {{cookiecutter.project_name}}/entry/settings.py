@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "rest_framework",
     "sslserver",
+    "ovinc_client",
     "ovinc_client.account",
     "ovinc_client.trace",
     "apps.cel",
