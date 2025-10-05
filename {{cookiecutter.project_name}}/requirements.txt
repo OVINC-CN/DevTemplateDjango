@@ -5,7 +5,7 @@ ovinc-client==0.4.2
 celery==5.5.3
 
 # ASGI
-asgiref==3.9.2
+asgiref==3.10.0
 channels[daphne]==4.3.1
 channels_redis==4.3.0
 
