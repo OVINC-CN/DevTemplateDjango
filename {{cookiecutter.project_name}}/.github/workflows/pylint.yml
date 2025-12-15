@@ -27,6 +27,9 @@ jobs:
         python -m pip install --upgrade pip
         pip install pylint
         pip install -r requirements.txt
+    - name: Django Check
+      run: |
+        python manage.py check
     - name: Analysing the code with pylint
       run: |
         make pylint
