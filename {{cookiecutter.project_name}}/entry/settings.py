@@ -192,6 +192,7 @@ BROKER_URL = f"redis://:{REDIS_PASSWORD}@{REDIS_HOST}:{REDIS_PORT}/{REDIS_DB}"
 
 # APM
 ENABLE_TRACE = strtobool(os.getenv("ENABLE_TRACE", "False"))
+ENABLE_OTLP_EXPORTER = strtobool(os.getenv("ENABLE_OTLP_EXPORTER", "False"))
 SERVICE_NAME = os.getenv("SERVICE_NAME", APP_CODE)
 OTLP_HOST = os.getenv("OTLP_HOST", "http://127.0.0.1:4317")
 OTLP_TOKEN = os.getenv("OTLP_TOKEN", "")
